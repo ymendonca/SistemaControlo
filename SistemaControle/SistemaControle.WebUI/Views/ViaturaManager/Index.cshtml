@@ -1,0 +1,117 @@
+﻿@model IEnumerable<SistemaControle.Core.Models.Viatura>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cilindrada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Portas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lugares)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valores_Aquisicao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_aquisicao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_Registo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Peso_Bruto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Peso_Liquido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Imagem)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Matricula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cilindrada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Portas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lugares)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valores_Aquisicao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_aquisicao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_Registo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Peso_Bruto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Peso_Liquido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Imagem)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

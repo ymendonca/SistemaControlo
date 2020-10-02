@@ -36,6 +36,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -175,6 +176,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ViaturaManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -338,6 +340,10 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\ViaturaManager\Index.cshtml" />
+    <Content Include="Views\ViaturaManager\Create.cshtml" />
+    <Content Include="Views\ViaturaManager\Edit.cshtml" />
+    <Content Include="Views\ViaturaManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -352,6 +358,24 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaControle.Core\SistemaControle.Core.csproj">
+      <Project>{dde4577d-3b95-43b5-bcb3-8808ed5f7a85}</Project>
+      <Name>SistemaControle.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaControle.DataAccess.InMemory\SistemaControle.DataAccess.InMemory.csproj">
+      <Project>{797240af-2e76-4f0a-b10d-4572b9e33abb}</Project>
+      <Name>SistemaControle.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaControle.DataAccess.SQL\SistemaControle.DataAccess.SQL.csproj">
+      <Project>{5b5820f7-8d68-4b1e-acba-cdd5f542ea37}</Project>
+      <Name>SistemaControle.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaControle.Service\SistemaControle.Service.csproj">
+      <Project>{495714eb-622a-40a2-9c45-f90363529178}</Project>
+      <Name>SistemaControle.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

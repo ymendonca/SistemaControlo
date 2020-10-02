@@ -1,0 +1,144 @@
+﻿@model SistemaControle.Core.Models.Viatura
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Viatura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matricula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cilindrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cilindrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Portas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Portas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lugares)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lugares)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valores_Aquisicao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valores_Aquisicao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_aquisicao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_aquisicao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_Registo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_Registo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Peso_Bruto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Peso_Bruto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Peso_Liquido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Peso_Liquido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Imagem)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

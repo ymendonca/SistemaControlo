@@ -11,11 +11,12 @@ namespace SistemaControle.DataAccess.InMemory
     public class ViaturaRepositorio
     {
         ObjectCache cache = MemoryCache.Default;
-        List<Viatura> viaturas = new List<Viatura>();    
+        List<Viatura> viaturas;    
 
         public ViaturaRepositorio()
         {
             viaturas = cache["viaturas"] as List<Viatura>;
+
             if(viaturas == null)
             {
                 viaturas = new List<Viatura>();
@@ -34,7 +35,7 @@ namespace SistemaControle.DataAccess.InMemory
 
         public void Update(Viatura viatura)
         {
-            Viatura viaturaToUpdate = viaturas.Find(v => v.Viatura_ID == viatura.Viatura_ID);
+            Viatura viaturaToUpdate = viaturas.Find(v => v.Id == viatura.Id);
 
             if (viaturaToUpdate != null)
             {
@@ -46,9 +47,9 @@ namespace SistemaControle.DataAccess.InMemory
             }
         }
 
-        public Viatura Find(string Viatura_ID)
+        public Viatura Find(string Id)
         {
-            Viatura viatura = viaturas.Find(v => v.Viatura_ID == Viatura_ID);
+            Viatura viatura = viaturas.Find(v => v.Id == Id);
 
             if(viatura != null)
             {
@@ -65,9 +66,9 @@ namespace SistemaControle.DataAccess.InMemory
             return viaturas.AsQueryable();
         }
 
-        public void Delete(string Viatura_Id)
+        public void Delete(string Id)
         {
-            Viatura viaturaTuDelete = viaturas.Find(v => v.Viatura_ID == Viatura_Id);
+            Viatura viaturaTuDelete = viaturas.Find(v => v.Id == Id);
 
             if(viaturaTuDelete != null)
             {
